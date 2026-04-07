@@ -19,7 +19,6 @@ export function HomePage() {
 
         <div className="animate-fade-rise animate-delay-3 mb-16 grid gap-8 md:grid-cols-2 md:gap-12">
           <div className="relative overflow-hidden rounded-sm border border-(--border-subtle) bg-(--bg-card) card-hover">
-            {/* Content image with empty alt — fails "Image elements have [alt]..." */}
             <img
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
               alt=""
@@ -37,22 +36,21 @@ export function HomePage() {
               <p className="text-2xl font-extralight text-(--mist)">Lumen sideboard</p>
               <p className="mt-3 text-sm text-(--text-muted-fail)">Oak, brass, silence.</p>
             </div>
-            {/* Div pretending to be a button: not focusable, no role/name */}
             <div
               className="cta-pulse cursor-pointer rounded-sm border border-(--gold) bg-(--gold)/10 px-8 py-4 text-center text-sm tracking-widest text-(--gold)"
               onClick={() => (window.location.href = '/atelier')}
+              role="button"
+              tabIndex="0"
             >
               Enter atelier
             </div>
             <Link
               to="/reach"
               className="text-center text-sm text-(--text-muted-fail) underline-offset-4 hover:underline"
-              tabIndex={4}
             >
               Request a conversation
             </Link>
-            {/* Positive tabindex on non-interactive content */}
-            <p tabIndex={2} className="text-xs text-(--text-muted-fail)">
+            <p className="text-xs text-(--text-muted-fail)">
               Private viewing by appointment.
             </p>
           </div>
@@ -61,7 +59,7 @@ export function HomePage() {
         <div id="featured" className="mb-4 text-xs tracking-[0.3em] text-(--gold-dim)">
           FEATURED
         </div>
-        <p id="featured" className="max-w-2xl text-sm text-(--mist)/90">
+        <p className="max-w-2xl text-sm text-(--mist)/90">
           Duplicate id attributes confuse assistive tech and fail parsing.
         </p>
       </div>
