@@ -47,12 +47,11 @@ export function HomePage() {
             <Link
               to="/reach"
               className="text-center text-sm text-(--text-muted-fail) underline-offset-4 hover:underline"
-              tabIndex={4}
             >
               Request a conversation
             </Link>
             {/* Positive tabindex on non-interactive content */}
-            <p tabIndex={2} className="text-xs text-(--text-muted-fail)">
+            <p className="text-xs text-(--text-muted-fail)">
               Private viewing by appointment.
             </p>
           </div>
