@@ -13,7 +13,7 @@ export function HomePage() {
           Objects for calm <span className="hero-shimmer">interiors</span>
         </h1>
         {/* Skipped heading levels: h1 → h4 */}
-        <h4 className="animate-fade-rise animate-delay-2 mb-12 max-w-xl text-lg font-light text-(--text-muted-fail)">
+        <h4 className="animate-fade-rise animate-delay-2 mb-12 max-w-xl text-lg font-light text-(--text-muted)">
           Quiet forms, honest materials, and light that lingers — a private collection for those who notice.
         </h4>
 
@@ -26,7 +26,7 @@ export function HomePage() {
               className="h-64 w-full object-cover opacity-90"
             />
             <div className="p-8">
-              <p className="text-sm leading-relaxed text-(--text-muted-fail)">
+              <p className="text-sm leading-relaxed text-(--text-muted)">
                 Each piece is shaped in our northern workshop. The grain tells the story; we only listen.
               </p>
             </div>
@@ -35,7 +35,7 @@ export function HomePage() {
             <div className="float-orb rounded-sm border border-(--border-subtle) bg-(--bg-elevated) p-10 card-hover">
               <p className="mb-4 text-xs tracking-[0.25em] text-(--gold)">SIGNATURE</p>
               <p className="text-2xl font-extralight text-(--mist)">Lumen sideboard</p>
-              <p className="mt-3 text-sm text-(--text-muted-fail)">Oak, brass, silence.</p>
+              <p className="mt-3 text-sm text-(--text-muted)">Oak, brass, silence.</p>
             </div>
             {/* Div pretending to be a button: not focusable, no role/name */}
             <div
@@ -46,13 +46,13 @@ export function HomePage() {
             </div>
             <Link
               to="/reach"
-              className="text-center text-sm text-(--text-muted-fail) underline-offset-4 hover:underline"
+              className="text-center text-sm text-(--text-muted) underline-offset-4 hover:underline"
               tabIndex={4}
             >
               Request a conversation
             </Link>
             {/* Positive tabindex on non-interactive content */}
-            <p tabIndex={2} className="text-xs text-(--text-muted-fail)">
+            <p tabIndex={2} className="text-xs text-(--text-muted)">
               Private viewing by appointment.
             </p>
           </div>
@@ -61,7 +61,7 @@ export function HomePage() {
         <div id="featured" className="mb-4 text-xs tracking-[0.3em] text-(--gold-dim)">
           FEATURED
         </div>
-        <p id="featured" className="max-w-2xl text-sm text-(--mist)/90">
+        <p id="featured-description" className="max-w-2xl text-sm text-(--mist)/90">
           Duplicate id attributes confuse assistive tech and fail parsing.
         </p>
       </div>
