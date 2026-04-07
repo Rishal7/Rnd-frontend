@@ -1,1 +1,122 @@
 @import "tailwindcss";
+
+/* Premium dark theme — some pairings intentionally fail contrast for Lighthouse demos */
+:root {
+  --bg-deep: #08080b;
+  --bg-elevated: #12121a;
+  --bg-card: #16161f;
+  --border-subtle: rgba(201, 169, 98, 0.12);
+  --gold: #c9a962;
+  --gold-dim: #9a8350;
+  --mist: #e8e6e3;
+  /* Fails WCAG AA for body text (~3:1 on dark bg) */
+  --text-muted-fail: #6b6b78;
+  --accent-glow: rgba(201, 169, 98, 0.35);
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+    background: var(--bg-deep);
+    color: var(--mist);
+    font-family: ui-sans-serif, system-ui, "SF Pro Display", "Segoe UI", sans-serif;
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+  70% {
+    box-shadow: 0 0 0 16px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.12s;
+  opacity: 0;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.24s;
+  opacity: 0;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.36s;
+  opacity: 0;
+}
+
+.hero-shimmer {
+  background: linear-gradient(
+    105deg,
+    var(--gold-dim) 0%,
+    var(--gold) 25%,
+    #f0e6d2 50%,
+    var(--gold) 75%,
+    var(--gold-dim) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+
+.float-orb {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+.card-hover {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.45s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 169, 98, 0.35);
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.65);
+}
+
+.cta-pulse {
+  animation: pulse-ring 2.5s ease-out infinite;
+}

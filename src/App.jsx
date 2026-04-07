@@ -1,8 +1,21 @@
+import { Routes, Route } from 'react-router-dom'
+import { SiteLayout } from './components/SiteLayout.jsx'
+import { HomePage } from './pages/HomePage.jsx'
+import { ProductsPage } from './pages/ProductsPage.jsx'
+import { ContactPage } from './pages/ContactPage.jsx'
+
+/**
+ * Demo SPA: polished UI with intentional accessibility issues for Lighthouse training.
+ */
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-800">Hello World</h1>
-    </div>
+    <SiteLayout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/atelier" element={<ProductsPage />} />
+        <Route path="/reach" element={<ContactPage />} />
+      </Routes>
+    </SiteLayout>
   )
 }
 
