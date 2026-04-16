@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const linkClass = ({ isActive }) =>
   `text-sm tracking-[0.2em] uppercase transition-colors duration-300 ${
-    isActive ? 'text-(--gold)' : 'text-(--text-muted-fail) hover:text-(--mist)'
+    isActive ? 'text-(--gold)' : 'text-(--text-muted) hover:text-(--mist-hover)'
   }`
 
 export function SiteLayout({ children }) {
@@ -21,7 +21,7 @@ export function SiteLayout({ children }) {
             <NavLink to="/atelier" className={linkClass}>
               Atelier
             </NavLink>
-            <NavLink to="/reach" className={linkClass}>
+            <NavLink to="/reach" className={`text-sm tracking-[0.2em] uppercase transition-colors duration-300 ${isActive ? 'text-(--gold)' : 'text-black hover:text-(--mist-hover)'}`}>
               Reach
             </NavLink>
           </div>
@@ -29,7 +29,7 @@ export function SiteLayout({ children }) {
       </div>
       {/* Intentionally no <main> landmark for Lighthouse */}
       <div className="flex-1">{children}</div>
-      <div className="border-t border-(--border-subtle) py-8 text-center text-xs text-(--text-muted-fail)">
+      <div className="border-t border-(--border-subtle) py-8 text-center text-xs text-black">
         © AURUM STUDIO — crafted silence
       </div>
     </div>
