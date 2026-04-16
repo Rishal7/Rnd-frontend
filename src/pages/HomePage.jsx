@@ -40,6 +40,8 @@ export function HomePage() {
             {/* Div pretending to be a button: not focusable, no role/name */}
             <div
               className="cta-pulse cursor-pointer rounded-sm border border-(--gold) bg-(--gold)/10 px-8 py-4 text-center text-sm tracking-widest text-(--gold)"
+              role="button"
+              tabIndex={0}
               onClick={() => (window.location.href = '/atelier')}
             >
               Enter atelier
@@ -47,12 +49,11 @@ export function HomePage() {
             <Link
               to="/reach"
               className="text-center text-sm text-(--text-muted-fail) underline-offset-4 hover:underline"
-              tabIndex={4}
             >
               Request a conversation
             </Link>
             {/* Positive tabindex on non-interactive content */}
-            <p tabIndex={2} className="text-xs text-(--text-muted-fail)">
+            <p className="text-xs text-(--text-muted-fail)">
               Private viewing by appointment.
             </p>
           </div>
@@ -61,7 +62,7 @@ export function HomePage() {
         <div id="featured" className="mb-4 text-xs tracking-[0.3em] text-(--gold-dim)">
           FEATURED
         </div>
-        <p id="featured" className="max-w-2xl text-sm text-(--mist)/90">
+        <p className="max-w-2xl text-sm text-(--mist)/90">
           Duplicate id attributes confuse assistive tech and fail parsing.
         </p>
       </div>
