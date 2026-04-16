@@ -2,7 +2,7 @@ export function ContactPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
       <h1 className="mb-4 text-4xl font-extralight tracking-tight md:text-5xl">Reach</h1>
-      <p className="mb-12 max-w-xl text-sm text-(--text-muted-fail)">
+      <p className="mb-12 max-w-xl text-sm text-[#555555]">
         Our atelier answers within two moons. The map below is decorative markup without a text alternative.
       </p>
 
@@ -16,19 +16,19 @@ export function ContactPage() {
           />
           <div className="p-8">
             <h3 className="text-xl font-light">Studio</h3>
-            <p className="mt-4 text-sm leading-relaxed text-(--text-muted-fail)">
+            <p className="mt-4 text-sm leading-relaxed text-[#555555]">
               14 Riverbend Lane
               <br />
               Hudson Valley
             </p>
             <div className="mt-6 flex items-center gap-6">
               {/* Link with no discernible text */}
-              <a href="https://example.com" className="text-(--gold)">
+              <a href="https://example.com" className="text-[#DAA520]">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                 </svg>
               </a>
-              <a href="#" className="text-sm text-(--mist) underline">
+              <a href="#" className="text-sm text-[#004B4B] underline">
                 click here
               </a>
             </div>
@@ -36,21 +36,21 @@ export function ContactPage() {
         </div>
 
         <aside className="flex flex-col rounded-sm border border-(--border-subtle) bg-(--bg-card) p-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:min-h-0">
-          <h3 className="mb-6 text-xs tracking-[0.3em] text-(--gold-dim)">HOURS</h3>
+          <h3 className="mb-6 text-xs tracking-[0.3em] text-[#DAA520]">HOURS</h3>
           {/* Data table without th — layout table anti-pattern */}
           <table className="w-full text-sm">
             <tbody>
               <tr className="border-b border-(--border-subtle)">
-                <td className="py-3 text-(--text-muted-fail)">Mon — Thu</td>
-                <td className="py-3 text-right text-(--mist)">10 — 18</td>
+                <td className="py-3 text-[#555555]">Mon — Thu</td>
+                <td className="py-3 text-right text-[#004B4B]">10 — 18</td>
               </tr>
               <tr className="border-b border-(--border-subtle)">
-                <td className="py-3 text-(--text-muted-fail)">Fri</td>
-                <td className="py-3 text-right text-(--mist)">By request</td>
+                <td className="py-3 text-[#555555]">Fri</td>
+                <td className="py-3 text-right text-[#004B4B]">By request</td>
               </tr>
             </tbody>
           </table>
-          <p className="mt-auto border-t border-(--border-subtle) pt-6 text-xs text-(--text-muted-fail)">
+          <p className="mt-auto border-t border-(--border-subtle) pt-6 text-xs text-[#555555]">
             Visits by appointment.
           </p>
         </aside>
@@ -64,11 +64,11 @@ export function ContactPage() {
               loading="lazy"
             />
             <div
-              className="pointer-events-none absolute inset-0 bg-linear-to-t from-(--bg-deep)/85 via-transparent to-(--bg-deep)/25"
+              className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#274B4B]/85 via-transparent to-[#274B4B]/25"
               aria-hidden="true"
             />
           </div>
-          <p className="border-t border-(--border-subtle) px-4 py-3 text-center text-[10px] tracking-[0.28em] text-(--gold-dim)">
+          <p className="border-t border-(--border-subtle) px-4 py-3 text-center text-[10px] tracking-[0.28em] text-[#DAA520]">
             REGION · HUDSON VALLEY
           </p>
         </div>
