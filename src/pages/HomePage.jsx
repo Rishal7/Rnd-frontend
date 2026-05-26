@@ -12,10 +12,9 @@ export function HomePage() {
         <h1 className="animate-fade-rise animate-delay-1 mb-4 max-w-3xl text-4xl font-extralight leading-tight tracking-tight md:text-6xl">
           Objects for calm <span className="hero-shimmer">interiors</span>
         </h1>
-        {/* Skipped heading levels: h1 → h4 */}
-        <h4 className="animate-fade-rise animate-delay-2 mb-12 max-w-xl text-lg font-light text-(--text-muted-fail)">
+        <h2 className="animate-fade-rise animate-delay-2 mb-12 max-w-xl text-lg font-light text-(--text-muted-fail)">
           Quiet forms, honest materials, and light that lingers — a private collection for those who notice.
-        </h4>
+        </h2>
 
         <div className="animate-fade-rise animate-delay-3 mb-16 grid gap-8 md:grid-cols-2 md:gap-12">
           <div className="relative overflow-hidden rounded-sm border border-(--border-subtle) bg-(--bg-card) card-hover">
@@ -47,12 +46,10 @@ export function HomePage() {
             <Link
               to="/reach"
               className="text-center text-sm text-(--text-muted-fail) underline-offset-4 hover:underline"
-              tabIndex={4}
             >
               Request a conversation
             </Link>
-            {/* Positive tabindex on non-interactive content */}
-            <p tabIndex={2} className="text-xs text-(--text-muted-fail)">
+            <p className="text-xs text-(--text-muted-fail)">
               Private viewing by appointment.
             </p>
           </div>
